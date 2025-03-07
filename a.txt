@@ -1,0 +1,20 @@
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+Một số ký hiệu toán học phổ biến trong LaTeX:
+
+\begin{align*}
+&\text{Tích phân: } \int_{a}^{b} x^2 \, dx \\
+&\text{Sigma tổng: } \sum_{n=1}^{\infty} \frac{1}{n^2} \\
+&\text{Ký hiệu đặc biệt: } \alpha, \beta, \gamma, \delta, \theta, \omega \\
+&\text{Ký hiệu tập hợp: } \mathbb{R}, \mathbb{Z}, \mathbb{N}, \mathbb{Q}, \mathbb{C} \\
+&\text{Mũi tên: } \rightarrow, \Rightarrow, \leftrightarrow, \Leftrightarrow \\
+&\text{Ký hiệu toán học khác: } \forall, \exists, \nabla, \infty, \cup, \cap \\
+&\text{Ký hiệu suy ra: } a \implies b \quad \text{và chỉ khi: } a \iff b \\
+\end{align*}
+
+\end{document}

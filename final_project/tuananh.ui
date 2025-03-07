@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Pomodoro Timer</string>
+  </property>
+  <property name="styleSheet">
+   <string>QMainWindow {
+    background-color: #FFF0F5;
+}
+QLabel {
+    color: #FF1493;
+}
+QPushButton {
+    background-color: #FF69B4;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+QPushButton:hover {
+    background-color: #FF1493;
+}
+QListWidget {
+    background-color: #FFECF2;
+    border: 1px solid #FF69B4;
+    border-radius: 5px;
+}
+QLineEdit {
+    border: 1px solid #FF69B4;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #FFECF2;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <!-- Hiển thị thời gian -->
+    <item>
+     <widget class="QLabel" name="label_time">
+      <property name="font">
+       <font>
+        <pointsize>36</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="text">
+       <string>25:00</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Hiển thị trạng thái -->
+    <item>
+     <widget class="QLabel" name="label_status">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="text">
+       <string>Đang làm việc</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Các nút điều khiển -->
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="button_start">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Bắt đầu</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_pause">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Tạm dừng</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_reset">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Đặt lại</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <!-- Tiêu đề danh sách công việc -->
+    <item>
+     <widget class="QLabel" name="label_tasks_title">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Danh sách công việc</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <!-- Ô nhập công việc -->
+    <item>
+     <widget class="QLineEdit" name="line_edit_task">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>Nhập công việc cần làm...</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Nút thêm công việc -->
+    <item>
+     <widget class="QPushButton" name="button_add_task">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Thêm công việc</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Danh sách công việc -->
+    <item>
+     <widget class="QListWidget" name="list_widget_tasks">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+     </widget>
+    </item>
+    <!-- Nút đánh dấu hoàn thành -->
+    <item>
+     <widget class="QPushButton" name="button_mark_done">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Đánh dấu hoàn thành</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Thông báo từ AI -->
+    <item>
+     <widget class="QLabel" name="label_ai_message">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="text">
+       <string>Bạn đang làm việc rất tốt!</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

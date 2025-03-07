@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Đăng Kí</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Nền ứng dụng với gradient */
+QWidget {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 #ff7eb3, /* Hồng nhạt */
+        stop: 0.33 #ffcc70, /* Vàng sáng */
+        stop: 0.66 #4db8ff, /* Xanh dương nhạt */
+        stop: 1 #96e6a1  /* Xanh lá nhạt */
+    );
+    color: #1a1a1a; /* Chữ màu tối nổi bật */
+}
+
+/* Các nút */
+QPushButton {
+    background-color: #4CAF50; /* Nút màu xanh lá nổi bật */
+    color: white; /* Chữ màu trắng */
+    border: 2px solid #388E3C; /* Viền nút */
+    border-radius: 8px; /* Bo góc nút */
+    padding: 8px 12px; /* Tăng kích thước nút */
+}
+
+/* Hover: Màu đậm hơn */
+QPushButton:hover {
+    background-color: #45A049; /* Xanh đậm hơn khi hover */
+}
+
+/* Pressed: Màu tối hơn khi bấm */
+QPushButton:pressed {
+    background-color: #357A38; /* Xanh đậm thêm khi bấm */
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>350</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">padding: 9px;</string>
+    </property>
+    <property name="text">
+     <string>Đăng Kí</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>361</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/admin/Downloads/image-removebg-preview.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>399</x>
+      <y>40</y>
+      <width>211</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Tên Đăng Nhập</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Mật Khẩu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_2"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Xác Thực Mật Khẩu</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_3"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

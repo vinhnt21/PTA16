@@ -36,3 +36,7 @@ class Bus(PhuongTien):
 
 container1 = Container("Huyndai Pro Ultra Note Max", "pink", 5000000, 5000)
 container1.show_name()
+
+
+print(isinstance(container1, PhuongTien))
+print(type(container1) == PhuongTien)

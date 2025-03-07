@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Piano Simulator</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="labelTitle">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Piano Simulator</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelOctaveInfo">
+      <property name="text">
+       <string>Playing in Octaves: 4, 5, 6</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelCurrentNote">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Note: -</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Enter Note Sequence (e.g. C4 D4 E4):</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="txtNoteSequence">
+        <property name="placeholderText">
+         <string>Enter notes like: C4 D4 E4 F4 G4</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnPlaySequence">
+        <property name="text">
+         <string>Play Sequence</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelStatus">
+      <property name="text">
+       <string>Status: Ready</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelKeyboardInfo">
+      <property name="text">
+       <string>Keyboard: A-S-D-F-G-H-J-K-L (white keys), W-E-T-Y-U-O-P (black keys)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="framePiano">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>200</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="pianoLayout">
+         <!-- White keys -->
+         <item>
+          <widget class="QPushButton" name="key_0">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_2">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>D</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_4">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>E</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_5">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>F</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_7">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>G</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_9">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>A</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_11">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>B</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_12">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>C</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_14">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>D</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="key_16">
+           <property name="minimumSize">
+            <size>
+             <width>40</width>
+             <height>180</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: white; border: 1px solid black;</string>
+           </property>
+           <property name="text">
+            <string>E</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+      <!-- Black keys (overlaid) -->
+      <widget class="QPushButton" name="key_1">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>C#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_3">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>D#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_6">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>F#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_8">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>G#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_10">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>A#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_13">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>C#</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="key_15">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>30</y>
+         <width>30</width>
+         <height>100</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string>background-color: black; color: white; border: 1px solid black;</string>
+       </property>
+       <property name="text">
+        <string>D#</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
